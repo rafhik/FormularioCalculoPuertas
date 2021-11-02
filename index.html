@@ -24,7 +24,7 @@
                         </td>
                         <td>
                             <label>Ancho hueco: </label>
-                            <input id="entry1" type="text"  placeholder="mm..."/>
+                            <input id="entry1" type="number"  min="0" max="10000" placeholder="mm..." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                         </td>
                     </tr>
                     <tr>
@@ -33,7 +33,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios2b" value="option2b" >
                             <label class="form-check-label" for="gridRadios2b">1fijo+1hoja</label></br></td>
                         <td><label>Alto hueco: &nbsp&nbsp&nbsp</label>
-                            <input id="entry2" type="text"  placeholder="mm..."/></td>
+                            <input id="entry2" type="number" min="0" max="10000" placeholder="mm..." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -43,7 +43,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios3b" value="option3b" >
                             <label class="form-check-label" for="gridRadios3b">2hojas</label></br></td>
                         <td><label>X: </label>
-                            <input id="entry3" type="text"  placeholder="mm..." value="200"/></td>
+                            <input id="entry3" type="number" min="-600" max="600" placeholder="mm..." value="200" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -63,7 +63,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios5b" value="option5b" >
                             <label class="form-check-label" for="gridRadios5b">Opcion 5b</label></br></td>
                         <td><label>Holgura ancho autoportante: </label>
-                            <input id="entry5" type="text"  placeholder="mm..." value="0"/></td>
+                            <input id="entry5" type="number"  min="0" max="50" placeholder="mm..." value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                     </tr>
                     <tr>
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option6" >
@@ -71,7 +71,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios6b" value="option6b" >
                             <label class="form-check-label" for="gridRadios6b">Opción 6b</label></br></td>
                         <td><label>Holgura alto autoportante: </label>
-                            <input id="entry6" type="text"  placeholder="mm..." value="0"/></br></td>
+                            <input id="entry6" type="number"  min="0" max="50" placeholder="mm..." value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></br></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -82,13 +82,13 @@
                         <td></td>
                         <td></td>
                         <td><label>Holgura ancho puerta: </label>
-                            <input id="entry7" type="text"  placeholder="mm..." value="0"/></td>
+                            <input id="entry7" type="number"  min="0" max="50" placeholder="mm..." value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
                         <td><label>Holgura alto puerta: </label>
-                            <input id="entry8" type="text"  placeholder="mm..." value="0"/></br></td>
+                            <input id="entry8" type="number"  min="0" max="50" placeholder="mm..." value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></br></td>
                     </tr>
                     
                 </table>

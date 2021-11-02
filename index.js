@@ -227,14 +227,14 @@ let button = document.getElementById("button1");
 button.onclick = function (){
 
     if (data4.checked == true) {
-        var FW_autoportante = Number(AnchoHuecoObra.value) - Number(HolguraAnchoAutoportante.value);
-        var FH_autoportante = Number(AltoHuecoObra.value) - Number(HolguraAltoAutoportante.value);
-        var AnchoHueco = Number(FW_autoportante) - Number(HolguraAnchoPuerta.value) - 100;
-        var AltoHueco = Number(FH_autoportante) - Number(HolguraAltoPuerta.value) - 163;
+        var FW_autoportante = AnchoHuecoObra.value - HolguraAnchoAutoportante.value;
+        var FH_autoportante = AltoHuecoObra.value - HolguraAltoAutoportante.value;
+        var AnchoHueco = FW_autoportante - HolguraAnchoPuerta.value - 100;
+        var AltoHueco = FH_autoportante - HolguraAltoPuerta.value - 163;
     }
     else {
-        var AnchoHueco = Number(AnchoHuecoObra.value) - Number(HolguraAnchoPuerta.value);
-        var AltoHueco = Number(AltoHuecoObra.value) - Number(HolguraAltoPuerta.value);
+        var AnchoHueco = AnchoHuecoObra.value - HolguraAnchoPuerta.value;
+        var AltoHueco = AltoHuecoObra.value - HolguraAltoPuerta.value;
     }
      
     if (data9.checked == true && data15.checked == true) {
