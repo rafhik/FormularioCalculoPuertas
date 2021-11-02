@@ -101,7 +101,13 @@ button {
   }
   label {
     font-size: 1.7vw;
+  
   }
+
+  input {
+    font-size: 1.4vw;
+  }
+
   td {
     padding-left: 0.5vw;
     padding-right: 0.1vw;
