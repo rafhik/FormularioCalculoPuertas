@@ -84,7 +84,11 @@ button {
   }
   table {
     size: 70%;
+    padding-left: 0vw;
+    border-spacing: 0.3vw 0vw;
+    margin: 0px -15px;
   }
+
   fieldset {
     size: 30%;
   }
@@ -96,13 +100,24 @@ button {
     margin: 0.5rem;
   }
   label {
-    font-size: 2.0vw;
+    font-size: 1.7vw;
   }
   td {
-    size: 35vw;
-    font-size: 2.8vw;
-    padding-left: 2.0vw;
+    padding-left: 0.5vw;
+    padding-right: 0.1vw;
+    height: 3vw;
+    width: 30%;
   }
+
+  td:first-child {
+    padding-left: 0.3vw;
+  }
+
+  td:last-child {
+    padding-right: 0.1vw;
+  }
+
+
 #chkraf {
   color: violet;
   background-color: yellow;
