@@ -11,10 +11,12 @@ h3 {
     background-color: rgb(30, 144, 211);
     border: solid 5px rgb(30, 144, 211);
     border-radius: 5px;
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
     align-items: center;
     text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
 }
 
 h4 {
@@ -22,15 +24,17 @@ h4 {
     background-color: rgb(30, 144, 211);
     border: solid 5px rgb(30, 144, 211);
     border-radius: 5px;
-    font-size: 3.5vw;
+    font-size: 3.0vw;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
     align-items: center;
     text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
 }
 
 p {
     color: white;
-    font-size: 3.5vw;
+    font-size: 3.0vw;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
     align-items: center;
     text-align: left;

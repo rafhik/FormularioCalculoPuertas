@@ -12,12 +12,17 @@ let data11 = document.getElementById("gridRadios3"); //Semitransparent
 let data12 = document.getElementById("gridRadios4"); //Transparent
 let data13 = document.getElementById("gridRadios5"); //Frame Break Out
 let data14 = document.getElementById("gridRadios6"); //SlimBreak Out
+let data21 = document.getElementById("gridRadios7"); //Frame Telescopic
+let data22 = document.getElementById("gridRadios8"); //Slim Telescopic
+let data23 = document.getElementById("gridRadios9"); //Semitransparent Telescopic
 let data15 = document.getElementById("gridRadios1b"); //1hoja
 let data16 = document.getElementById("gridRadios2b"); //1fijo+1hoja
 let data17 = document.getElementById("gridRadios3b"); //2hojas
 let data18 = document.getElementById("gridRadios4b"); //2fijos+2hojas
-let data19 = document.getElementById("gridRadios5b"); //opcion 5b
-let data20 = document.getElementById("gridRadios6b"); //opcion 6b
+let data19 = document.getElementById("gridRadios5b"); //2hojas moviles
+let data20 = document.getElementById("gridRadios6b"); //1fijo+2hojas moviles
+let data24 = document.getElementById("gridRadios7b"); //4 Hojas moviles
+let data25 = document.getElementById("gridRadios8b"); //2fijos+4hojas moviles
 
 const resultados = {
     X : data3.value,
@@ -231,6 +236,143 @@ function slimbreakout2f2h(ancho, alto, dX) {
   return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Break Out 2 fijos + 2 hojas moviles"];
 }
 
+
+//tipo21
+function frametelescopic2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW - 22;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 297;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 2 hojas moviles"];
+  }
+
+//tipo22
+function frametelescopic1f2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-184 )/3;
+    resultados.COH = resultados.FH;
+    resultados.CL = resultados.FW + 153;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 1 fijo + 2 hojas moviles"];
+  }
+
+//tipo23
+function frametelescopic4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW - 22;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 297;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 4 hojas moviles"];
+  }
+
+//tipo24
+function frametelescopic2f4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-330 )/3;
+    resultados.COH = resultados.FH;
+    resultados.CL = resultados.FW;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 2 fijo + 4 hojas moviles"];
+  }
+
+//tipo25
+function slimtelescopic2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW - 7;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 297;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 2 hojas moviles"];
+  }
+
+//tipo26
+function slimtelescopic1f2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-74 )/3;
+    resultados.COH = resultados.FH-50;
+    resultados.CL = resultados.FW + 110;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 1 fijo + 2 hojas moviles"];
+  }
+
+//tipo27
+function slimtelescopic4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW - 4;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 195;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 4 hojas moviles"];
+  }
+
+//tipo28
+function slimtelescopic2f4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-128 )/3;
+    resultados.COH = resultados.FH-50;
+    resultados.CL = resultados.FW;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 2 fijo + 4 hojas moviles"];
+  }
+
+//tipo29
+function semitransparenttelescopic2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 231;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 2 hojas moviles"];
+  }
+
+//tipo30
+function semitransparenttelescopic1f2m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-100 )/3;
+    resultados.COH = resultados.FH;
+    resultados.CL = resultados.FW + 130;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 1 fijo + 2 hojas moviles"];
+  }
+
+//tipo31
+function semitransparenttelescopic4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = resultados.FW;
+    resultados.COH = resultados.FH;
+    resultados.CL = (resultados.COW *1.5) + 231;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 4 hojas moviles"];
+  }
+
+//tipo32
+function semitransparenttelescopic2f4m(ancho, alto, dX) {
+    resultados.X = dX;
+    resultados.FW = ancho;
+    resultados.FH = alto;
+    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-200 )/3;
+    resultados.COH = resultados.FH;
+    resultados.CL = resultados.FW;
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 2 fijo + 4 hojas moviles"];
+  }
+
+
+
+ 
+
 const inicial = {
     FW_autoportante : 0,
     FH_autoportante : 0,
@@ -290,9 +432,59 @@ button.onclick = function () {
     var presentar = slimbreakout1f1h(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
   } else if (data14.checked == true && data18.checked == true) {
     var presentar = slimbreakout2f2h(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } else {
+  } 
+    else if (data21.checked == true && data19.checked == true) {
+    var presentar = frametelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data21.checked == true && data20.checked == true) {
+    var presentar = frametelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data21.checked == true && data24.checked == true) {
+    var presentar = frametelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data21.checked == true && data25.checked == true) {
+    var presentar = frametelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data22.checked == true && data19.checked == true) {
+    var presentar = slimtelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data22.checked == true && data20.checked == true) {
+    var presentar = slimtelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data22.checked == true && data24.checked == true) {
+    var presentar = slimtelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data22.checked == true && data25.checked == true) {
+    var presentar = slimtelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data23.checked == true && data19.checked == true) {
+    var presentar = semitransparenttelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data23.checked == true && data20.checked == true) {
+    var presentar = semitransparenttelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data23.checked == true && data24.checked == true) {
+    var presentar = semitransparenttelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    else if (data23.checked == true && data25.checked == true) {
+    var presentar = semitransparenttelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
+  } 
+    
+    else {
     var presentar = ["N/A", "N/A", "N/A", "N/A", "N/A", "Modelo no existente"];
   }
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
 
   if (data4.checked == true) {
     document.body.innerHTML = `

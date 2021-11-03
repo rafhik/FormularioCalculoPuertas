@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text toa Variable</title>
+    <title>Calculo medidas puertas</title>
 </head>
 <body>
     <h3>Calculo de medidas</h3>
@@ -20,7 +20,7 @@
                         </td>
                         <td>
                             <input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios1b" value="option1b">
-                            <label class="form-check-label" for="gridRadios1b">1hoja</label></br>        
+                            <label class="form-check-label" for="gridRadios1b">1 hoja</label></br>        
                         </td>
                         <td>
                             <label>Ancho hueco: </label>
@@ -31,7 +31,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" >
                             <label class="form-check-label" for="gridRadios2">Slim</label></br></td>
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios2b" value="option2b" >
-                            <label class="form-check-label" for="gridRadios2b">1fijo+1hoja</label></br></td>
+                            <label class="form-check-label" for="gridRadios2b">1 fijo + 1 hoja</label></br></td>
                         <td><label>Alto hueco: &nbsp&nbsp&nbsp</label>
                             <input id="entry2" type="number" min="0" max="10000" placeholder="mm..." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="2500"/></td>
                     </tr>
@@ -39,7 +39,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
                             <label class="form-check-label" for="gridRadios3">Semitransparent</label></br></td>
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios3b" value="option3b" >
-                            <label class="form-check-label" for="gridRadios3b">2hojas</label></br></td>
+                            <label class="form-check-label" for="gridRadios3b">2 hojas</label></br></td>
                         <td><label>X: </label>
                             <input id="entry3" type="number" min="-600" max="600" placeholder="mm..." value="200" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                     </tr>
@@ -47,7 +47,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" >
                             <label class="form-check-label" for="gridRadios4">Transparent</label></br></td>
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios4b" value="option4b"checked >
-                            <label class="form-check-label" for="gridRadios4b">2fijos+2hojas </label></br></td>
+                            <label class="form-check-label" for="gridRadios4b">2 fijos + 2 hojas</label></br></td>
                         <td>
                             <label><b>Autoportante: </b></label>
                             <input id="entry4" class="chkraf" type="checkbox"/></br>  
@@ -57,7 +57,7 @@
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5" >
                             <label class="form-check-label" for="gridRadios5">Frame Break Out</label></br></td>
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios5b" value="option5b" >
-                            <label class="form-check-label" for="gridRadios5b">Opcion 5b</label></br></td>
+                            <label class="form-check-label" for="gridRadios5b">2 moviles</label></br></td>
                         <td><label>Holgura ancho autoportante: </label>
                             <input id="entry5" type="number"  min="0" max="50" placeholder="mm..." value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                     </tr>
@@ -65,23 +65,28 @@
                         <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option6" >
                             <label class="form-check-label" for="gridRadios6">Slim Break Out</label></br></td>
                         <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios6b" value="option6b" >
-                            <label class="form-check-label" for="gridRadios6b">Opción 6b</label></br></td>
+                            <label class="form-check-label" for="gridRadios6b">1 fijo + 2 moviles</label></br></td>
                         <td><label>Holgura alto autoportante: </label>
                             <input id="entry6" type="number"  min="0" max="50" placeholder="mm..." value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></br></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios7" value="option7" >
+                            <label class="form-check-label" for="gridRadios7">Frame Telescopic</label></br></td>
+                        <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios7b" value="option7b" >
+                            <label class="form-check-label" for="gridRadios7b">4 moviles</label></br></td>
                         <td><label><b>Puerta: </b></label>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8" value="option8" >
+                            <label class="form-check-label" for="gridRadios8">Slim Telescopic</label></br></td>
+                        <td><input class="form-check-input" type="radio" name="gridRadiosb" id="gridRadios8b" value="option8b" >
+                            <label class="form-check-label" for="gridRadios8b">2 fijos + 4 moviles</label></br></td>
                         <td><label>Holgura ancho puerta: </label>
                             <input id="entry7" type="number"  min="0" max="50" placeholder="mm..." value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios9" value="option9" >
+                            <label class="form-check-label" for="gridRadios9">Semitransparent Telescopic</label></br></td>
                         <td></td>
                         <td><label>Holgura alto puerta: </label>
                             <input id="entry8" type="number"  min="0" max="50" placeholder="mm..." value="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></br></td>
