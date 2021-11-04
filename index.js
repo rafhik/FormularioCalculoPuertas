@@ -253,7 +253,7 @@ function frametelescopic1f2m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-184 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(2*resultados.X)-184 )/3);
     resultados.COH = resultados.FH;
     resultados.CL = resultados.FW + 153;
     return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 1 fijo + 2 hojas moviles"];
@@ -275,10 +275,10 @@ function frametelescopic2f4m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-330 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(4*resultados.X)-330 )/3);
     resultados.COH = resultados.FH;
     resultados.CL = resultados.FW;
-    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 2 fijo + 4 hojas moviles"];
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Frame Telescopic 2 fijos + 4 hojas moviles"];
   }
 
 //tipo25
@@ -297,7 +297,7 @@ function slimtelescopic1f2m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-74 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(2*resultados.X)-74 )/3);
     resultados.COH = resultados.FH-50;
     resultados.CL = resultados.FW + 110;
     return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 1 fijo + 2 hojas moviles"];
@@ -319,10 +319,10 @@ function slimtelescopic2f4m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-128 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(4*resultados.X)-128 )/3);
     resultados.COH = resultados.FH-50;
     resultados.CL = resultados.FW;
-    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 2 fijo + 4 hojas moviles"];
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Slim Telescopic 2 fijos + 4 hojas moviles"];
   }
 
 //tipo29
@@ -341,7 +341,7 @@ function semitransparenttelescopic1f2m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(2*resultados.X)-100 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(2*resultados.X)-100 )/3);
     resultados.COH = resultados.FH;
     resultados.CL = resultados.FW + 130;
     return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 1 fijo + 2 hojas moviles"];
@@ -363,10 +363,10 @@ function semitransparenttelescopic2f4m(ancho, alto, dX) {
     resultados.X = dX;
     resultados.FW = ancho;
     resultados.FH = alto;
-    resultados.COW = ((2 * resultados.FW)-(4*resultados.X)-200 )/3;
+    resultados.COW = Math.floor(((2 * resultados.FW)-(4*resultados.X)-200 )/3);
     resultados.COH = resultados.FH;
     resultados.CL = resultados.FW;
-    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 2 fijo + 4 hojas moviles"];
+    return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 2 fijos + 4 hojas moviles"];
   }
 
 const inicial = {
@@ -456,6 +456,18 @@ button.onclick = function () {
     var presentar = ["N/A", "N/A", "N/A", "N/A", "N/A", "<h5>Modelo no contemplado</h5>"];
   }
 
+  if (presentar[5] == "<h5>Modelo no contemplado</h5>"){
+    document.body.innerHTML = `
+        <h3>Calculo de medidas puertas</h3>
+        <h4>Tipo: ${presentar[5]}<br>
+        <a href="#" onclick="window.location.reload(true);">Introducir nuevos datos...</a>`;
+        return;
+  }
+
+
+
+
+
   if (data4.checked == true) {
     document.body.innerHTML = `
         <h3>Calculo de medidas puertas</h3>
@@ -469,7 +481,7 @@ button.onclick = function () {
         COH: &nbsp${presentar[3]} mm<br><br>
         CL: ${presentar[4]} mm<br>
         X: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp${resultados.X} mm<br></p>
-        <a href="#" onclick="window.location.reload(true);">Introducir nuevos datos...</a>`;
+        <a href="#" onclick="window.location.reload(true);"><br>Introducir nuevos datos...</a>`;
   } else {
     document.body.innerHTML = `
         <h3>Calculo de medidas puertas</h3>
@@ -481,6 +493,6 @@ button.onclick = function () {
         COH: &nbsp${presentar[3]} mm<br><br>
         CL: ${presentar[4]} mm<br>
         X: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp${resultados.X} mm<br></p>
-        <a href="#" onclick="window.location.reload(true);">Introducir nuevos datos...</a>`;
+        <a href="#" onclick="window.location.reload(true);"><br>Introducir nuevos datos...</a>`;
   }
 };
