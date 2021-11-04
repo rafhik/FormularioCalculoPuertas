@@ -1,3 +1,10 @@
+:root {
+  --blue: rgb(30,144,211);
+}
+
+
+
+
 body {
     font-size: 1rem;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
@@ -8,8 +15,8 @@ body {
 }
 h3 {
     color: white;
-    background-color: rgb(30, 144, 211);
-    border: solid 5px rgb(30, 144, 211);
+    background-color: var(--blue);
+    border: solid 5px var(--blue);
     border-radius: 5px;
     font-size: 4.5vw;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
@@ -21,8 +28,8 @@ h3 {
 
 h4 {
     color: white;
-    background-color: rgb(30, 144, 211);
-    border: solid 5px rgb(30, 144, 211);
+    background-color: var(--blue);
+    border: solid 5px var(--blue);
     border-radius: 5px;
     font-size: 3.0vw;
     font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
@@ -30,6 +37,18 @@ h4 {
     text-align: center;
     margin-top: 0vw;
     margin-bottom: 1vw;
+}
+h5 {
+  color: rgb(0, 0, 0);
+  background-color: rgb(194, 248, 0);
+  border: solid 5px var(--blue);
+  border-radius: 5px;
+  font-size: 3.0vw;
+  font-family:"Open Sans Condensed", "Festive", Arial, Helvetica, sans-serif;
+  align-items: center;
+  text-align: center;
+  margin-top: 0vw;
+  margin-bottom: 1vw;
 }
 
 p {
@@ -39,7 +58,7 @@ p {
     align-items: center;
     text-align: left;
     margin: 0.5rem;
-    background-color: rgb(30, 144, 211);
+    background-color: var(--blue);
     padding: 0.5rem;
 }
 
@@ -95,9 +114,10 @@ button {
 
   fieldset {
     size: 30%;
+    border-radius: 5px;
   }
   a {
-    color: rgb(30, 144, 211);
+    color: var(--blue);
     font-size: large;
     font-weight: bold;
     padding-top: 0.5rem;
@@ -116,17 +136,8 @@ button {
     padding-left: 0.5vw;
     padding-right: 0.1vw;
     height: 3vw;
-    width: 30%;
+    width: 40%;
   }
-
-  td:first-child {
-    padding-left: 0.3vw;
-  }
-
-  td:last-child {
-    padding-right: 0.1vw;
-  }
-
 
 #chkraf {
   color: violet;
@@ -134,4 +145,44 @@ button {
   border: yellow;
   border: 25px;
   size: 50vw;
+}
+
+
+tbody>tr>:nth-child(1){
+  width:30%;
+  text-align:left;
+  vertical-align: middle;
+  padding-left: 0.3vw;
+ }
+
+tbody>tr>:nth-child(2){
+  width:25%;
+  text-align:left;
+  vertical-align: middle;
+  border-right: 1px solid #ddd;
+  padding-left: 0.3vw;
+}
+
+
+ tbody>tr>:nth-child(3){
+  width:50%;
+  text-align:start;
+  vertical-align: middle;
+  padding-right: 0.1vw;
+  padding-left: 1vw;
+ }
+
+ tbody>tr>:nth-child(3):hover {
+   background-color: rgb(211, 211, 211);}
+
+#button1 {
+  color: white;
+  background-color: var(--blue);
+  font-size: 3.0vw;
+  border: white solid 1px;
+  border-radius: 10px;
+  width: 20%;
+}
+#button1:hover {
+  background-color: gray;
 }

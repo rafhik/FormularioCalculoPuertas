@@ -369,10 +369,6 @@ function semitransparenttelescopic2f4m(ancho, alto, dX) {
     return [resultados.FW, resultados.FH, resultados.COW, resultados.COH, resultados.CL, "Semitransparent Telescopic 2 fijo + 4 hojas moviles"];
   }
 
-
-
- 
-
 const inicial = {
     FW_autoportante : 0,
     FH_autoportante : 0,
@@ -432,59 +428,33 @@ button.onclick = function () {
     var presentar = slimbreakout1f1h(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
   } else if (data14.checked == true && data18.checked == true) {
     var presentar = slimbreakout2f2h(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data21.checked == true && data19.checked == true) {
+  } else if (data21.checked == true && data19.checked == true) {
     var presentar = frametelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data21.checked == true && data20.checked == true) {
+  } else if (data21.checked == true && data20.checked == true) {
     var presentar = frametelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data21.checked == true && data24.checked == true) {
+  } else if (data21.checked == true && data24.checked == true) {
     var presentar = frametelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data21.checked == true && data25.checked == true) {
+  } else if (data21.checked == true && data25.checked == true) {
     var presentar = frametelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data22.checked == true && data19.checked == true) {
+  } else if (data22.checked == true && data19.checked == true) {
     var presentar = slimtelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data22.checked == true && data20.checked == true) {
+  } else if (data22.checked == true && data20.checked == true) {
     var presentar = slimtelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data22.checked == true && data24.checked == true) {
+  } else if (data22.checked == true && data24.checked == true) {
     var presentar = slimtelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data22.checked == true && data25.checked == true) {
+  } else if (data22.checked == true && data25.checked == true) {
     var presentar = slimtelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data23.checked == true && data19.checked == true) {
+  } else if (data23.checked == true && data19.checked == true) {
     var presentar = semitransparenttelescopic2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data23.checked == true && data20.checked == true) {
+  } else if (data23.checked == true && data20.checked == true) {
     var presentar = semitransparenttelescopic1f2m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data23.checked == true && data24.checked == true) {
+  } else if (data23.checked == true && data24.checked == true) {
     var presentar = semitransparenttelescopic4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    else if (data23.checked == true && data25.checked == true) {
+  } else if (data23.checked == true && data25.checked == true) {
     var presentar = semitransparenttelescopic2f4m(inicial.AnchoHueco, inicial.AltoHueco, data3.value);
-  } 
-    
-    else {
-    var presentar = ["N/A", "N/A", "N/A", "N/A", "N/A", "Modelo no existente"];
+  } else {
+    var presentar = ["N/A", "N/A", "N/A", "N/A", "N/A", "<h5>Modelo no contemplado</h5>"];
   }
-
-
-  
-  
-  
-  
-  
-  
-  
-
-
-
 
   if (data4.checked == true) {
     document.body.innerHTML = `
